@@ -10,7 +10,7 @@ const Product = ({ loderData }) => {
                     loderData.slice(0, 3).map((data) => <ProductCard key={data.id} data={data}></ProductCard>)
                 }
             </div>
-            <div className="mt-8">
+            <div className="mt-8 flex justify-center">
                 <Link to="all-products" className="btn- btn-outline bg-lime-500 px-6 py-3 m-8 rounded text-white">See All Products</Link>
             </div>
         </div>

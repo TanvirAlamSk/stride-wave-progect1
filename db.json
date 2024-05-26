@@ -6,7 +6,7 @@
       "title": "Nike Air Zoom Pegasus 37",
       "price": 120,
       "description": "Nike's Air Zoom Pegasus 37 offers the ideal fit and comfort for your running needs with responsive cushioning.",
-      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d0018c80-6420-44e4-a94e-64b64627d662/pegasus-39-mens-road-running-shoes-jXTgc9.png"
+      "image": "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1253,c_limit/ecb4855e-5ed6-45f9-b8e8-fbced58d1b85/%E2%80%AFnike-air-zoom-pegasus-37.jpg"
     },
     {
       "id": "2",
@@ -76,9 +76,17 @@
       "id": "10",
       "model": "WBS890",
       "title": "Sorel Caribou Waterproof Boot",
-      "price": 170,
+      "price": "1700",
       "description": "Sorel Caribou boots are designed to keep your feet warm and dry in harsh winter conditions.",
       "image": "https://columbia.scene7.com/is/image/ColumbiaSportswear2/2030481_247_f?wid=768&hei=806&v=1714468679"
+    },
+    {
+      "id": "11",
+      "model": "cbdvbdjs",
+      "title": "kbcljdbvkjdsbv",
+      "price": "7643756",
+      "description": "k;snvdfhvouerhvbhbvhdfbvbdbfvbhfd",
+      "image": ".kknlvkndljvbjdfkjbvfdkjbv"
     }
   ]
 }

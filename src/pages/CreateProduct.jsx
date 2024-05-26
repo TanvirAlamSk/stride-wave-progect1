@@ -4,28 +4,27 @@ import { useShoes } from '../hooks/useShoes';
 import toast from 'react-hot-toast';
 
 const CreateProduct = () => {
-    // const shoes = useLoaderData()
-    const [shoes, setShoes] = useState([])
-    const handelAddProduct = async (event) => {
-        await fetch('http://localhost:3000/shoes')
-            .then((response) => response.json())
-            .then((data) => setShoes(data))
+    // const [shoes, setShoes] = useState([])
+    const shoes = useLoaderData()
 
+    const handelAddProduct = (event) => {
         event.preventDefault();
+
         const model = event.target.model.value
         const title = event.target.title.value
         const price = event.target.price.value
         const image = event.target.image.value
         const description = event.target.description.value
+        console.log((shoes.length).toString)
         const newProduct = {
-            id: shoes.length + 1,
+            id: `${shoes.length + 1}`,
             model,
             title,
             price,
-            image,
-            description
+            description,
+            image
         }
-        await fetch('http://localhost:3000/shoes', {
+        fetch("http://localhost:3000/shoes", {
             method: "POST",
             header: {
                 "content-type": "application/json"

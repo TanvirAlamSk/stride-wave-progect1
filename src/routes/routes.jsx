@@ -49,7 +49,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: "add-product",
-                element: <CreateProduct></CreateProduct>
+                element: <CreateProduct></CreateProduct>,
+                loader: () => fetch('http://localhost:3000/shoes')
             },
             {
                 path: "update/:id",
