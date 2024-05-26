@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DashboardCard = ({ shoe, handelDelectProduct }) => {
-    const { id, model, title } = shoe
+    const { id, model, title, price } = shoe
     return (
         <tr>
             <th>{id}</th>
             <td>{model}</td>
             <td>{title}</td>
+            <td>{price}</td>
             <td className='flex gap-2'>
                 <Link to={`/dashboard/update/${id}`}>
                     <button className='btn btn-sm btn-success text-white'>Update</button>

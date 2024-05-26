@@ -12,7 +12,7 @@
       "id": "2",
       "model": "BS456",
       "title": "Adidas Ultraboost 21",
-      "price": 180,
+      "price": "185",
       "description": "Adidas Ultraboost 21 is designed for comfort and energy return, perfect for long runs and everyday wear.",
       "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/231a3c6976214bb59b8a94bed55453a3_9366/Ultraboost_Light_Shoes_Pink_ID3288_HM1.jpg"
     },
@@ -79,14 +79,6 @@
       "price": "1700",
       "description": "Sorel Caribou boots are designed to keep your feet warm and dry in harsh winter conditions.",
       "image": "https://columbia.scene7.com/is/image/ColumbiaSportswear2/2030481_247_f?wid=768&hei=806&v=1714468679"
-    },
-    {
-      "id": "11",
-      "model": "cbdvbdjs",
-      "title": "kbcljdbvkjdsbv",
-      "price": "7643756",
-      "description": "k;snvdfhvouerhvbhbvhdfbvbdbfvbhfd",
-      "image": ".kknlvkndljvbjdfkjbvfdkjbv"
     }
   ]
 }

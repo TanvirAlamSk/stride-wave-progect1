@@ -35,6 +35,7 @@ const Dashboard = () => {
                                 <th>No</th>
                                 <th>Model</th>
                                 <th>Title</th>
+                                <th>Price</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
