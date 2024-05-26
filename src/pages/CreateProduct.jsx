@@ -46,7 +46,7 @@ const CreateProduct = () => {
         <div className='md:w-2/3 mx-auto my-10 p-6 border border-solid rounded-md'>
             <h2 className='text-2xl font-semibold text-center'>Add A New Product</h2>
             <form onSubmit={handelAddProduct} className="card-body pb-0">
-                <div className='flex w-full gap-6 mt-5 justify-around'>
+                <div className='flex flex-col md:flex-row w-full gap-6 mt-5 justify-around'>
                     <div className='w-full'>
                         <label className='text-gray-500'>Model</label>
                         <input name='model' type="text" placeholder="model" className="input input-bordered w-full" />
@@ -56,7 +56,7 @@ const CreateProduct = () => {
                         <input name='title' type="text" placeholder="title" className="input input-bordered w-full" />
                     </div>
                 </div>
-                <div className='flex w-full gap-6 justify-around mt-6'>
+                <div className='flex flex-col md:flex-row w-full gap-6 justify-around mt-6'>
                     <div className='w-full'>
                         <label className='text-gray-500'>Price</label>
                         <input name='price' type="text" placeholder="price" className="input input-bordered w-full" />
