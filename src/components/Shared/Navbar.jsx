@@ -15,9 +15,9 @@ const Navbar = () => {
                 :
                 <li><Link to="/login">Login</Link></li>
         }
-
-
     </>
+
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -41,8 +41,25 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
+                {/* <button className="btn" onClick={() => document.getElementById('delete_modal').showModal()}>Confirm</button> */}
                 <div className="navbar-end">
                     {/* <button onClick={() => toast.success('Successfully toasted!')} className="btn">Button</button> */}
+
+                    {/* <dialog id="delete_modal" className="modal">
+                        <div className="modal-box">
+                            <form method="dialog">
+                                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                            </form>
+                            <h3 className="font-bold text-lg">Hello!</h3>
+                            <p className="py-4">Press ESC key or click on ✕ button to close</p>
+                            <div className="modal-action">
+                                <form method="dialog">
+                                    <button className="btn btn-sm btn-active">Cancel</button>
+                                    <button className="btn btn-sm btn-active btn-secondary text-white ms-2">Confirm</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog> */}
                 </div>
             </div>
         </div>

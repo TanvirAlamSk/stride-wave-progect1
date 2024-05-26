@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import { useLoaderData } from 'react-router-dom';
+import { Navigate, useLoaderData, useNavigate } from 'react-router-dom';
+import Modal from '../components/Shared/Modal';
 
 const UpdateProduct = () => {
     const data = useLoaderData()
+    const [shoeData, setShoeData] = useState(data)
+    const navigate = useNavigate()
     const { id, model, title, price, image, description } = data
     const handelUpdateProduct = (event) => {
         event.preventDefault();
@@ -19,6 +22,9 @@ const UpdateProduct = () => {
             image,
             description
         }
+        console.log(updateProduct)
+        setShoeData("")
+        // navigate("/dashboard")
         fetch(`http://localhost:3000/shoes/${id}`, {
             method: "PATCH",
             header: {
@@ -30,6 +36,7 @@ const UpdateProduct = () => {
             .then((data) => {
                 console.log(data)
                 toast.success("Product update successfully")
+                setShoeData(data)
             })
     }
     return (
@@ -62,9 +69,15 @@ const UpdateProduct = () => {
                         <label className='text-gray-500'>Description</label>
                         <textarea name='description' defaultValue={description} type="text" className="textarea textarea-bordered w-full h-36" ></textarea>
                     </div>
-                    <button type='submit' className='w-full btn btn-info text-white my-4'> Update Product </button>
                 </div>
+                {
+                    shoeData && <Modal
+                    >Are you sure  to update this product?</Modal>
+                }
             </form>
+            <div className='px-8'>
+                <button onClick={() => document.getElementById("update_modal").showModal()} className='w-full btn btn-info text-white my-4'> Update Product </button>
+            </div>
         </div>
     );
 };

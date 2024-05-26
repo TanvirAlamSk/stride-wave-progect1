@@ -18,6 +18,7 @@ const DashboardLayouts = () => {
                         <div>
                             <li><Link to="/dashboard">Manage Product</Link></li>
                             <li><Link to="/dashboard/add-product">Add Product</Link></li>
+                            <li><Link to="/dashboard/profile">Profile</Link></li>
                         </div>
 
                         <li className="bottom-1"><Link to="/">Go To Home</Link></li>
