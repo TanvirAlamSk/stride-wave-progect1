@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../context/AuthProvider";
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const { user, logout } = useContext(authContext)
@@ -41,7 +42,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {/* <button onClick={() => toast.success('Successfully toasted!')} className="btn">Button</button> */}
                 </div>
             </div>
         </div>

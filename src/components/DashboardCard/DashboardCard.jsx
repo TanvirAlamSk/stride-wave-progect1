@@ -10,7 +10,7 @@ const DashboardCard = ({ shoe, handelDelectProduct }) => {
             <td>{title}</td>
             <td className='flex gap-2'>
                 <Link to={`/dashboard/update/${id}`}>
-                    <button className='btn btn-sm btn-warning text-white'>Update</button>
+                    <button className='btn btn-sm btn-success text-white'>Update</button>
                 </Link>
                 <button onClick={() => handelDelectProduct(id)} className='btn btn-sm btn-error text-white'>Delate</button>
             </td>

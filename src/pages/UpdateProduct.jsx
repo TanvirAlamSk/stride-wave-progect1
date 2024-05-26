@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 
 const UpdateProduct = () => {
@@ -28,7 +29,7 @@ const UpdateProduct = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-                alert("Product update successfully")
+                toast.success("Product update successfully")
             })
     }
     return (

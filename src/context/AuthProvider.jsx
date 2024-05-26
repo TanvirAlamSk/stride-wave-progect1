@@ -3,6 +3,7 @@
 import { createContext, useEffect, useState } from "react";
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import toast from "react-hot-toast";
 
 const auth = getAuth(app)
 export const authContext = createContext()
@@ -17,7 +18,7 @@ const AuthProvider = ({ children }) => {
             // eslint-disable-next-line no-unused-vars
             .then((userCredential) => {
                 // const PresentUser = userCredential.user
-                alert("User Create SuccessFul")
+                toast.success("User Create SuccessFul")
             }).catch((error) => alert(error))
     }
 
@@ -32,7 +33,7 @@ const AuthProvider = ({ children }) => {
             .then((result) => {
                 // eslint-disable-next-line no-unused-vars
                 const PresentUser = result.user
-                alert("Login SuccessFul")
+                toast.success("Login SuccessFul")
             })
             .alert((error) => alert(error))
 
@@ -41,7 +42,7 @@ const AuthProvider = ({ children }) => {
     const logout = () => {
         signOut(auth)
             .then(() => {
-                alert("Logout SuccessFul")
+                toast.success("Logout SuccessFul")
             })
             .catch((error) => alert(error))
     }

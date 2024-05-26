@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { useShoes } from '../hooks/useShoes';
+import toast from 'react-hot-toast';
 
 const CreateProduct = () => {
     // const shoes = useLoaderData()
     const [shoes, setShoes] = useState([])
     const handelAddProduct = async (event) => {
-
         await fetch('http://localhost:3000/shoes')
             .then((response) => response.json())
             .then((data) => setShoes(data))
@@ -35,7 +35,7 @@ const CreateProduct = () => {
             .then((response) => response.json())
             .then((result) => {
                 if (result) {
-                    alert("product Added Successfully")
+                    toast.success("product Added Successfully")
                     event.target.reset()
                 }
             })

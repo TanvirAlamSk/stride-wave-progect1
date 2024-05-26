@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import DashboardCard from "../components/DashboardCard/DashboardCard";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const Dashboard = () => {
     const [shoes, setShoes] = useState([])
@@ -18,6 +19,7 @@ const Dashboard = () => {
             .then((data) => {
                 const restShoes = shoes.filter((shoe) => shoe.id !== data.id)
                 setShoes(restShoes)
+                toast.success("product delete successful")
             })
     }
     return (

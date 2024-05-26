@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../context/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
     const navigate = useNavigate()
@@ -14,7 +15,7 @@ const Login = () => {
         loginUser(name, password)
             // eslint-disable-next-line no-unused-vars
             .then((userCredential) => {
-                alert("Login SuccessFul")
+                toast.success("Login SuccessFul")
                 navigate(from, { replace: true })
             })
             .catch((error) => alert(error))
