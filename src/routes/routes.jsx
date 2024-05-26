@@ -11,6 +11,7 @@ import PrivateRouter from "./PrivateRouter";
 import AllProducts from "../pages/AllProducts/AllProducts";
 import CreateProduct from "../pages/CreateProduct";
 import UpdateProduct from "../pages/UpdateProduct";
+import Profile from "../pages/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -56,6 +57,11 @@ export const router = createBrowserRouter([
                 path: "update/:id",
                 element: <UpdateProduct></UpdateProduct>,
                 loader: ({ params }) => fetch(`http://localhost:3000/shoes/${params.id}`)
+            },
+            {
+                path: "profile",
+                element: <Profile></Profile>,
+
             }
         ])
     }

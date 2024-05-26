@@ -11,7 +11,10 @@ const Navbar = () => {
         <li><Link to="/dashboard">Dashboard</Link></li>
         {
             user?.uid ?
-                <li><button onClick={logout}>LogOut</button></li>
+                <>
+                    <li><Link to="dashboard/profile">Profile</Link></li>
+                    <li><button onClick={logout}>LogOut</button></li>
+                </>
                 :
                 <li><Link to="/login">Login</Link></li>
         }
