@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
                 const PresentUser = result.user
                 toast.success("Login SuccessFul")
             })
-            .alert((error) => alert(error))
+            .catch((error) => alert(error))
 
     }
 

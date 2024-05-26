@@ -11,7 +11,7 @@ const Product = ({ loderData }) => {
                 }
             </div>
             <div className="mt-8 flex justify-center">
-                <Link to="all-products" className="btn- btn-outline bg-lime-500 px-6 py-3 m-8 rounded text-white">See All Products</Link>
+                <Link to="all-products" className="btn- btn-outline bg-sky-700 px-6 py-3 m-8 rounded text-white">See All Products</Link>
             </div>
         </div>
     );

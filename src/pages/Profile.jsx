@@ -17,18 +17,18 @@ const Profile = () => {
                             <p className="dark:text-gray-300 md:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 text-base leading-normal text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
                         </div>
                     </div>
-                    <div className="lg:w-8/12 mt-6 md:mt-8 lg:mt-0">
+                    <div className="lg:w-4/12 mt-6 md:mt-8 lg:mt-0">
                         <div className="relative w-full h-full">
                             {
                                 user?.photoURL ?
-                                    <img src={user?.photoURL} alt="A lounge sofa" className="w-full h-full relative hidden lg:block" />
+                                    <img src={user?.photoURL} alt="profile img" className="w-full h-full relative" />
                                     :
-                                    <img src={profilePicture} alt="A lounge sofa" className="w-full h-full relative hidden lg:block" />
+                                    <img src={profilePicture} alt="profile img" className="w-full h-full relative" />
 
                             }
-                            <img src="https://i.ibb.co/Mhgkt2f/pexels-maksim-goncharenok-4352247-1-1-1.png" alt="A lounge sofa" className="w-full h-full lg:hidden" />
+                            {/* <img src="https://i.ibb.co/Mhgkt2f/pexels-maksim-goncharenok-4352247-1-1-1.png" alt="A lounge sofa" className="w-full h-full lg:hidden" /> */}
                             <div className="hidden lg:block absolute bottom-0 right-0 bg-red-200 w-1/2">
-                                <button className="dark:hover:bg-gray-800 dark:bg-white dark:hover:text-gray-50 dark:text-gray-800 bg-gray-800 text-xl xl:text-2xl font-medium text-white flex justify-between w-full items-center p-5 xl:p-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700">
+                                <button className="dark:hover:bg-gray-800 dark:bg-white dark:hover:text-gray-50 dark:text-gray-800 bg-gray-800 text-lg xl:text-xl font-medium text-white flex justify-between w-full items-center p-5 xl:p-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700">
                                     <Link to="">Change Profile</Link>
                                     <div>
                                         <svg className="fill-stroke dark:hover:text-gray-600" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -16,9 +16,9 @@ const DashboardLayouts = () => {
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content flex-col justify-between">
                         <div>
-                            <li><Link to="/dashboard">Manage Product</Link></li>
+                            <li><Link to="/dashboard">Profile</Link></li>
+                            <li><Link to="/dashboard/manage-product">Manage Product</Link></li>
                             <li><Link to="/dashboard/add-product">Add Product</Link></li>
-                            <li><Link to="/dashboard/profile">Profile</Link></li>
                         </div>
 
                         <li className="bottom-1"><Link to="/">Go To Home</Link></li>
