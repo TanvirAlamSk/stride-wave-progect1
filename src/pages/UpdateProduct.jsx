@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import { Navigate, useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Modal from '../components/Shared/Modal';
 
 const UpdateProduct = () => {
     const data = useLoaderData()
-    const [shoeData, setShoeData] = useState(data)
+    const [shoeData, setShoeData] = useState(true)
     const navigate = useNavigate()
     const { id, model, title, price, image, description } = data
     const handelUpdateProduct = (event) => {
@@ -15,6 +15,7 @@ const UpdateProduct = () => {
         const price = event.target.price.value
         const image = event.target.image.value
         const description = event.target.description.value
+
         const updateProduct = {
             model,
             title,
@@ -22,11 +23,16 @@ const UpdateProduct = () => {
             image,
             description
         }
-        console.log(updateProduct)
-        setShoeData("")
+        setShoeData(false);
+        if (model === "" || title === "" || price === "" || image === "" || description === "") {
+            setTimeout(() => {
+                setShoeData(true)
+            }, 100)
+            return toast.error("please fill up all input section")
+        }
         // navigate("/dashboard")
         fetch(`http://localhost:3000/shoes/${id}`, {
-            method: "PATCH",
+            method: "PUT",
             header: {
                 "Content-Type": "Application/json"
             },
@@ -34,9 +40,8 @@ const UpdateProduct = () => {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
+                setShoeData(true)
                 toast.success("Product update successfully")
-                setShoeData(data)
             })
     }
     return (

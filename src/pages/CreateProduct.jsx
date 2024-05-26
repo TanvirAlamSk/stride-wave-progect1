@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { useShoes } from '../hooks/useShoes';
 import toast from 'react-hot-toast';
+import Modal from '../components/Shared/Modal';
 
 const CreateProduct = () => {
-    // const [shoes, setShoes] = useState([])
     const shoes = useLoaderData()
+    const [shoesdata, setShoesdata] = useState(true)
 
     const handelAddProduct = (event) => {
         event.preventDefault();
-
         const model = event.target.model.value
         const title = event.target.title.value
         const price = event.target.price.value
         const image = event.target.image.value
         const description = event.target.description.value
-        console.log((shoes.length).toString)
+
         const newProduct = {
             id: `${shoes.length + 1}`,
             model,
@@ -24,6 +24,14 @@ const CreateProduct = () => {
             description,
             image
         }
+        if (model === "" || title === "" || price === "" || image === "" || description === "") {
+            setTimeout(() => {
+                setShoesdata(true)
+            }, 200)
+
+            return toast.error("please fill up all input section")
+        }
+
         fetch("http://localhost:3000/shoes", {
             method: "POST",
             header: {
@@ -35,6 +43,7 @@ const CreateProduct = () => {
             .then((result) => {
                 if (result) {
                     toast.success("product Added Successfully")
+                    setShoesdata(true)
                     event.target.reset()
                 }
             })
@@ -71,9 +80,15 @@ const CreateProduct = () => {
                         <label className='text-gray-500'>Description</label>
                         <textarea name='description' type="text" placeholder="description" className="textarea textarea-bordered w-full h-36"></textarea>
                     </div>
-                    <button type='submit' className='w-full btn btn-info text-white my-4'>Add Product</button>
+
                 </div>
+                {
+                    shoesdata && <Modal> Click "Confirm" for add this product</Modal>
+                }
             </form>
+            <div className='px-8'>
+                <button onClick={() => document.getElementById("update_modal").showModal()} className='w-full btn btn-info text-white my-4'>Add Product</button>
+            </div>
         </div>
     );
 };
