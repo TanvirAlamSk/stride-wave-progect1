@@ -1,0 +1,100 @@
+{
+  "shoes": [
+    {
+      "id": 1,
+      "model": "RS123",
+      "title": "Nike Air Zoom Pegasus 37",
+      "price": 120,
+      "description": "Nike's Air Zoom Pegasus 37 offers the ideal fit and comfort for your running needs with responsive cushioning.",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d0018c80-6420-44e4-a94e-64b64627d662/pegasus-39-mens-road-running-shoes-jXTgc9.png"
+    },
+    {
+      "id": 2,
+      "model": "BS456",
+      "title": "Adidas Ultraboost 21",
+      "price": 180,
+      "description": "Adidas Ultraboost 21 is designed for comfort and energy return, perfect for long runs and everyday wear.",
+      "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/231a3c6976214bb59b8a94bed55453a3_9366/Ultraboost_Light_Shoes_Pink_ID3288_HM1.jpg"
+    },
+    {
+      "id": 3,
+      "model": "CS789",
+      "title": "Converse Chuck Taylor All Star",
+      "price": 55,
+      "description": "The iconic Converse Chuck Taylor All Star is a timeless sneaker with a classic design.",
+      "image": "https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw5598b08e/images/a_107/A10262C_A_107X1.jpg?sw=964"
+    },
+    {
+      "id": 4,
+      "model": "HS012",
+      "title": "Timberland PRO Hyperion Waterproof Work Boot",
+      "price": 190,
+      "description": "These waterproof work boots are built to keep you comfortable and protected on the job.",
+      "image": "https://images.timberland.com/is/image/timberland/90625357-HERO?hei=1350&wid=1350&qlt=50&resMode=sharp2&op_usm=0.9,1.0,8,0"
+    },
+    {
+      "id": 5,
+      "model": "SS345",
+      "title": "Salomon Speedcross 5 Trail Running Shoes",
+      "price": 130,
+      "description": "The Salomon Speedcross 5 is built for trail running, offering excellent grip and stability.",
+      "image": "https://runcompany.co.uk/cdn/shop/products/salomon-men-s-speedcross-5-trail-shoe-goji-berry-w-black-8-29510904873137_600x.png?v=1709375553"
+    },
+    {
+      "id": 6,
+      "model": "FLS678",
+      "title": "Cole Haan GrandPro Tennis Sneaker",
+      "price": 150,
+      "description": "Stylish and comfortable, the Cole Haan GrandPro Tennis Sneaker is perfect for casual wear.",
+      "image": "https://www.colehaan.com/dw/image/v2/AALO_PRD/on/demandware.static/-/Sites-itemmaster_colehaan/default/dw575d9705/images/C22584/large/_e_N_C22584.jpg?sw=510"
+    },
+    {
+      "id": 7,
+      "model": "TS901",
+      "title": "Asics Gel-Kayano 27",
+      "price": 160,
+      "description": "The Asics Gel-Kayano 27 provides superior support and cushioning for long-distance running.",
+      "image": "https://images.asics.com/is/image/asics/1014A259_007_SR_RT_GLB?$zoom$"
+    },
+    {
+      "id": 8,
+      "model": "TS234",
+      "title": "New Balance Fresh Foam 1080v11",
+      "price": 150,
+      "description": "New Balance's Fresh Foam 1080v11 offers plush cushioning and a natural ride for running.",
+      "image": "https://nb.scene7.com/is/image/NB/u9060blk_nb_02_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600"
+    },
+    {
+      "id": 9,
+      "model": "SFS567",
+      "title": "Birkenstock Arizona Soft Footbed Sandal",
+      "price": 135,
+      "description": "The Birkenstock Arizona is a comfortable and supportive sandal with a classic two-strap design.",
+      "image": "https://www.birkenstock.com/dw/image/v2/BDXC_PRD/on/demandware.static/-/Sites-master-catalog/default/dw1c14c58a/151183/151183.jpg?sw=848&sh=848&strip=false"
+    },
+    {
+      "id": 10,
+      "model": "WBS890",
+      "title": "Sorel Caribou Waterproof Boot",
+      "price": 170,
+      "description": "Sorel Caribou boots are designed to keep your feet warm and dry in harsh winter conditions.",
+      "image": "https://columbia.scene7.com/is/image/ColumbiaSportswear2/2030481_247_f?wid=768&hei=806&v=1714468679"
+    },
+    {
+      "id": 11,
+      "model": "IG3320",
+      "title": "ADIZERO BOSTON 12 RUNNING SHOES",
+      "price": "160",
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ee82faf538964684a25ada28902dade6_9366/Adizero_Boston_12_Running_Shoes_Beige_IG3320_HM1.jpg",
+      "description": "A layered midsole construction made of our high-performance foam Lightstrike Pro plus the all-new Lightstrike 2.0, engineered to deliver a cushioned and dynamic ride. The Continental™ outsole provides superior grip in the most demanding conditions."
+    },
+    {
+      "id": 12,
+      "model": "IG3320",
+      "title": "ADIZERO BOSTON 12 RUNNING SHOES",
+      "price": "160",
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ee82faf538964684a25ada28902dade6_9366/Adizero_Boston_12_Running_Shoes_Beige_IG3320_HM1.jpg",
+      "description": "A layered midsole construction made of our high-performance foam Lightstrike Pro plus the all-new Lightstrike 2.0, engineered to deliver a cushioned and dynamic ride. The Continental™ outsole provides superior grip in the most demanding conditions."
+    }
+  ]
+}
