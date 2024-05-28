@@ -1,12 +1,10 @@
 import React from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { Link } from "react-router-dom";
 
 const ProductPage = () => {
     const loaderData = useLoaderData()
-    const params = useParams()
-    // console.log(params)
-    const { id, model, title, price, description, image } = loaderData
+    const { model, title, price, description, image } = loaderData
     return (
         <div className='my-10'>
             <div className="card w-full md:w-7/12 px-2 mx-auto glass">

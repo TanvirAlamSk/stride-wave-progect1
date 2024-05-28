@@ -11,13 +11,11 @@ const ManageProduct = () => {
     }, [])
 
     const handelDelectProduct = (id) => {
-        console.log(id)
         fetch(`http://localhost:3000/shoes/${id}`, {
             method: "DELETE",
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
                 const restShoes = shoes.filter((shoe) => shoe.id != id)
                 setShoes(restShoes)
                 toast.success("product delete successful")

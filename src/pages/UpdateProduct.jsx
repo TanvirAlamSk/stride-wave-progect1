@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import Modal from '../components/Shared/Modal';
 
 const UpdateProduct = () => {
     const data = useLoaderData()
     const [shoeData, setShoeData] = useState(true)
-    const navigate = useNavigate()
     const { id, model, title, price, image, description } = data
     const handelUpdateProduct = (event) => {
         event.preventDefault();

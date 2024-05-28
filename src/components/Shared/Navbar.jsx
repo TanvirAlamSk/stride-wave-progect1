@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../context/AuthProvider";
-import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const { user, logout } = useContext(authContext)
@@ -12,7 +11,6 @@ const Navbar = () => {
         {
             user?.uid ?
                 <>
-                    {/* <li><Link to="/profile">Profile</Link></li> */}
                     <li><button onClick={logout}>LogOut</button></li>
                 </>
                 :

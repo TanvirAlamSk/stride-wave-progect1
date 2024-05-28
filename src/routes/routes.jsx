@@ -11,7 +11,6 @@ import PrivateRouter from "./PrivateRouter";
 import AllProducts from "../pages/AllProducts/AllProducts";
 import CreateProduct from "../pages/CreateProduct";
 import UpdateProduct from "../pages/UpdateProduct";
-import Profile from "../pages/Profile";
 import ManageProduct from "../pages/ManageProduct";
 
 export const router = createBrowserRouter([

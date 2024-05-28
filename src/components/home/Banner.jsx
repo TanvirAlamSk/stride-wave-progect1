@@ -1,4 +1,3 @@
-import bgimg from "../../assets/bg.jpg"
 import bgim2 from "../../assets/Eid-2-web-banner4.webp"
 const Banner = () => {
     return (

@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import { createContext, useEffect, useState } from "react";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 import app from "../firebase/firebase.config";
 import toast from "react-hot-toast";
+// import app from "../firebase/firebase.init";
 
 const auth = getAuth(app)
 export const authContext = createContext()
@@ -11,13 +12,16 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState({})
     const [loader, setLoader] = useState(true)
     const googleProvider = new GoogleAuthProvider()
+    const githubProvider = new GithubAuthProvider()
 
     const createNewUser = (email, password) => {
         setLoader(true)
         createUserWithEmailAndPassword(auth, email, password)
             // eslint-disable-next-line no-unused-vars
             .then((userCredential) => {
-                // const PresentUser = userCredential.user
+                // const Present
+                const user = userCredential.user
+                setLoader(false)
                 toast.success("User Create SuccessFul")
             }).catch((error) => alert(error))
     }
@@ -34,9 +38,22 @@ const AuthProvider = ({ children }) => {
                 // eslint-disable-next-line no-unused-vars
                 const PresentUser = result.user
                 toast.success("Login SuccessFul")
+                setLoader(false)
             })
             .catch((error) => alert(error))
 
+    }
+
+    const githubLogin = () => {
+        setLoader(true)
+        signInWithPopup(auth, githubProvider)
+            .then((result) => {
+                // eslint-disable-next-line no-unused-vars
+                const PresentUser = result.user
+                toast.success("Login SuccessFul")
+                setLoader(false)
+            })
+            .catch((error) => alert(error))
     }
 
     const logout = () => {
@@ -57,7 +74,7 @@ const AuthProvider = ({ children }) => {
         return () => unSubscriber()
     }, [])
 
-    const value = { user, loader, createNewUser, loginUser, googleLogin, logout }
+    const value = { user, loader, setLoader, createNewUser, loginUser, googleLogin, githubLogin, logout }
     return (
         <authContext.Provider value={value}>
             {children}

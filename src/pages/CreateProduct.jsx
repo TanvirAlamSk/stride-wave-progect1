@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { useShoes } from '../hooks/useShoes';
 import toast from 'react-hot-toast';
 import Modal from '../components/Shared/Modal';
 

@@ -5,7 +5,6 @@ import profilePicture from '../assets/prifile_picture.jpg';
 
 const Profile = () => {
     const { user } = useContext(authContext)
-    console.log(user)
     return (
         <div className="dark:bg-gray-900">
             <div className="container mx-auto py-9 md:py-12 lg:py-24">
@@ -17,7 +16,7 @@ const Profile = () => {
                             <p className="dark:text-gray-300 md:w-7/12 lg:w-11/12 xl:w-10/12 mt-4 lg:mt-5 text-base leading-normal text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
                         </div>
                     </div>
-                    <div className="lg:w-4/12 mt-6 md:mt-8 lg:mt-0">
+                    <div className="lg:w-3/12 mt-6 md:mt-8 lg:mt-0">
                         <div className="relative w-full h-full">
                             {
                                 user?.photoURL ?
@@ -26,12 +25,11 @@ const Profile = () => {
                                     <img src={profilePicture} alt="profile img" className="w-full h-full relative" />
 
                             }
-                            {/* <img src="https://i.ibb.co/Mhgkt2f/pexels-maksim-goncharenok-4352247-1-1-1.png" alt="A lounge sofa" className="w-full h-full lg:hidden" /> */}
-                            <div className="hidden lg:block absolute bottom-0 right-0 bg-red-200 w-1/2">
-                                <button className="dark:hover:bg-gray-800 dark:bg-white dark:hover:text-gray-50 dark:text-gray-800 bg-gray-800 text-lg xl:text-xl font-medium text-white flex justify-between w-full items-center p-5 xl:p-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700">
+                            <div className="block absolute bottom-0 right-0 bg-red-200 w-2/3">
+                                <button className="dark:hover:bg-gray-800 dark:bg-white dark:hover:text-gray-50 dark:text-gray-800 bg-gray-800  text-sm xl:text-base p-1 font-medium text-white flex justify-between w-full items-center rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700">
                                     <Link to="">Change Profile</Link>
                                     <div>
-                                        <svg className="fill-stroke dark:hover:text-gray-600" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg className="fill-stroke dark:hover:text-gray-600" width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.66663 16H25.3333" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                             <path d="M20 21.3333L25.3333 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                             <path d="M20 10.667L25.3333 16.0003" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -40,7 +38,7 @@ const Profile = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="mt-6 md:mt-8 lg:hidden">
+                        {/* <div className="mt-6 md:mt-8 lg:hidden">
                             <button className="dark:hover:bg-gray-800 dark:bg-white dark:hover:text-gray-50 dark:text-gray-800 bg-gray-800 text-base md:text-xl font-semibold leading-tight text-white flex justify-between items-center px-5 py-4 lg:py-7 lg:px-7 w-full md:w-5/12 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700">
                                 Discover More
                                 <div>
@@ -58,7 +56,7 @@ const Profile = () => {
                                     </svg>
                                 </div>
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

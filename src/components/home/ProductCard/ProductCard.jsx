@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
-    const { id, model, title, price, description, image } = data
+    const { id, title, description, image } = data
     return (
         <div className="card  bg-base-100 shadow-xl">
             <figure><img src={image} className="h-96 w-full" alt="Shoes" /></figure>
