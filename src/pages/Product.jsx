@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
 
 const ProductPage = () => {
     const loaderData = useLoaderData()
+    const location = useLocation()
     const { model, title, price, description, image } = loaderData
     return (
         <div className='my-10'>
@@ -19,7 +20,7 @@ const ProductPage = () => {
                     </div>
                 </div>
             </div>
-            <Link to="/"><button className="ms-72 rounded mt-6 border border-solid border-lime-600 px-6 py-3">Back</button></Link>
+            <Link to={`${location.state ? location.state : "/"}`}><button className="ms-72 rounded mt-6 border border-solid border-lime-600 px-6 py-3">Back</button></Link>
         </div>
     );
 };

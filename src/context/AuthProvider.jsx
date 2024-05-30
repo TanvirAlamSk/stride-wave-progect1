@@ -4,11 +4,10 @@ import { createContext, useEffect, useState } from "react";
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 import app from "../firebase/firebase.config";
 import toast from "react-hot-toast";
-// import app from "../firebase/firebase.init";
 
-const auth = getAuth(app)
 export const authContext = createContext()
 const AuthProvider = ({ children }) => {
+    const auth = getAuth(app)
     const [user, setUser] = useState({})
     const [loader, setLoader] = useState(true)
     const googleProvider = new GoogleAuthProvider()
